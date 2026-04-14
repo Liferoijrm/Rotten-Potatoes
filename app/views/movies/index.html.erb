@@ -1,12 +1,32 @@
 <h1>Movies</h1>
 
+<table>
+  <tr>
+    <%# link_to("Texto do Link", rota_ou_caminho, opções_de_html) %>
+    <th>
+      <%= link_to "Title", movies_path(sort_by: 'title'), id: :title_header%>
+    </th>
+    <th>
+      <%= link_to "Release Date", movies_path(sort_by: 'release_date'), id: :release_date_header%>
+    </th>
+  </tr>
+  <% @movies.each do | movie |%>
+    <tr>
+      <td><%= link_to movie.title, movie_path(movie) %></td>
+      <td><%= movie.release_date %></td>
+    </tr>
+  <%end%>
+</table>
+
 <%= link_to "New Movie", new_movie_path %>
 
+<% if false %>
 <% @movies.each do |movie| %>
   <div>
     <%# link to linka o movie_path ao título do filme, só o título aparece na tela como link clicável %>
     <%= link_to movie.title, movie_path(movie) %>
   </div>
+<% end %>
 <% end %>
 
 <% if false %>
