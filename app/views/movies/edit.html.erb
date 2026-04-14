@@ -1,0 +1,4 @@
+<h1>Edit movie | <%=@movie.title%></h1>
+
+<%= render "form", movie: @movie %>
+<%= link_to "Cancel", movie_path(@movie) %>

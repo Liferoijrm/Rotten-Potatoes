@@ -1,0 +1,23 @@
+<h1>Movies</h1>
+
+<%= link_to "New Movie", new_movie_path %>
+
+<% @movies.each do |movie| %>
+  <div>
+    <%# link to linka o movie_path ao título do filme, só o título aparece na tela como link clicável %>
+    <%= link_to movie.title, movie_path(movie) %>
+  </div>
+<% end %>
+
+<% if false %>
+<%# código comentado que eu fiz, é melhor usar link_to com div do que href com a%>
+<div id="movies">
+  <% @movies.each do |movie| %>
+    <div> 
+      <a href=<%= movie_path(movie) %>>
+        <%= movie.title %>
+      /a>
+    <div>
+  <% end %>
+</div>
+<% end %>
