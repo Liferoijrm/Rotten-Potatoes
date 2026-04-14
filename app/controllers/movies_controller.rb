@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
     # instancia um novo movie com o método product_params para segurança
     @movie = Movie.new(movie_params)
     # tenta salvar no banco
-    if @movie.save 
+    if @movie.save
       # redirect_to vai pra página de show
       redirect_to @movie
     else
