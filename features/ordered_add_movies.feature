@@ -1,4 +1,4 @@
-Feature: User can add movie by searching for it in The Movie Database (TMDb)
+Feature: User can order movie list by title
     As a movie fan 
     So that I can order the movie list by title in alphabetical order without manual tedium
     I want to see the list ordered after pressing "Movie title"
