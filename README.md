@@ -1,6 +1,6 @@
 # RottenPotatoes - Rails Study Implementation
 
-A Ruby on Rails simple implementation of the **RottenPotatoes** application, based on Chapter 4 of the *Engineering Software as a Service (ESaaS)* book. This project serves as a small study into Rails' CRUD operations, ActiveRecord, and dynamic view rendering.
+A Ruby on Rails simple implementation of the **RottenPotatoes** application, based on Chapter 4 of the *Engineering Software as a Service (ESaaS)* book. This project serves as a small study into Rails' CRUD operations, ActiveRecord, and dynamic view rendering, as well as a quick review of BDD techniques learnt at my Software Engineering classes.
 
 ## 🚀 Features
 
@@ -12,6 +12,7 @@ A Ruby on Rails simple implementation of the **RottenPotatoes** application, bas
     * Implementation of **Strong Parameters** to prevent mass-assignment vulnerabilities.
     * **Turbo-powered** deletion with confirmation dialogs.
 * **DRY Code**: Uses Rails **Partials** (`_form.html.erb`) to share logic between New and Edit views.
+* **Behavior-Driven Development (BDD):** Comprehensive end-to-end test suite using Cucumber and Capybara to simulate real user interactions and ensure feature reliability.
 
 ## 🛠️ Tech Stack
 
@@ -19,6 +20,8 @@ A Ruby on Rails simple implementation of the **RottenPotatoes** application, bas
 * **Framework**: Ruby on Rails
 * **Database**: SQLite3
 * **Frontend**: ERB (Embedded Ruby), CSS3, Turbo (Hotwire)
+* **Testing & BDD**: Cucumber, Capybara, RSpec
+* **API Integration**: HTTParty, dotenv-rails
 
 ## 📋 Prerequisites
 
@@ -48,6 +51,7 @@ A Ruby on Rails simple implementation of the **RottenPotatoes** application, bas
     ```
 
 4.  **Run the Server:**
+    
     ```bash
     rails server
     ```

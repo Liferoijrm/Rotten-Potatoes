@@ -14,7 +14,13 @@
 
   <div>
     <%= form.label :rating %>
-    <%= form.text_field :rating%>
+    <%= form.select :rating, [
+        ['G', 'G'],
+        ['PG', 'PG'],
+        ['PG-13', 'PG-13'],
+        ['R', 'R'],
+      ]
+    %>
   </div>
 
   <div>
@@ -26,6 +32,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Save Changes"%>
   </div>
 <% end %>

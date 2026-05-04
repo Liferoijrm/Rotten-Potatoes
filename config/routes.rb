@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  # nova rota para busca do TMDb
+  get "/movies/search", to: "movies#search_TMDb", as: "search_TMDb"
+
   #==================================================
   # CRUD básico (dava pra fazer com "resources :movies")
   # essa sintaxe do "to:" faz basicamente o mesmo que "=>"

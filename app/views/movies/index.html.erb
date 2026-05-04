@@ -1,24 +1,42 @@
-<h1>Movies</h1>
+<h1>Rotten Potatoes - by Pedro Marcinoni</h1>
+<hr>
+<h2>All Movies List</h2>
 
 <table>
   <tr>
     <%# link_to("Texto do Link", rota_ou_caminho, opções_de_html) %>
     <th class="<%=params[:sort_by] == 'title' ? 'hilite' : nil%>">
-      <%= link_to "Title", movies_path(sort_by: 'title'), id: :title_header%>
+      <%= link_to "Movie Title", movies_path(sort_by: 'title'), id: :title_header%>
     </th>
     <th class="<%=params[:sort_by] == 'release_date' ? 'hilite' : nil%>">
       <%= link_to "Release Date", movies_path(sort_by: 'release_date'), id: :release_date_header%>
+    </th>
+    <th>
+      Rating
     </th>
   </tr>
   <% @movies.each do | movie |%>
     <tr>
       <td><%= link_to movie.title, movie_path(movie) %></td>
       <td><%= movie.release_date %></td>
+      <td><%= movie.rating %></td>
     </tr>
   <%end%>
 </table>
 
-<%= link_to "New Movie", new_movie_path %>
+<hr>
+
+<%= link_to "Add new movie", new_movie_path %>
+
+<hr>
+
+<h2> Search TMDb for a movie </h2>
+
+<%= form_with url: search_TMDb_path, method: :get do |form| %>
+  <%= form.search_field :query, placeholder: "Search Terms" %>
+  <%= form.submit "Search TMDb" %>
+<% end %>
+
 
 <% if false %>
 <% @movies.each do |movie| %>
